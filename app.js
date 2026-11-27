@@ -43,10 +43,7 @@ window.addEventListener("load", () => {
 
 var typed = new Typed(".typing", {
   strings: [
-    "développeur web full-stack",
-    "développeur back-end Node.js",
-    "étudiant à HETIC",
-    "fondateur de la marque Illusions",
+    "développeur full-stack",
   ],
   typeSpeed: 100,
   backSpeed: 60,
