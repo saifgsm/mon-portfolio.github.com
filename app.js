@@ -45,7 +45,7 @@ var typed = new Typed(".typing", {
   strings: [
     "développeur web full-stack",
     "développeur back-end Node.js",
-    "étudiant en informatique",
+    "étudiant à HETIC",
     "fondateur de la marque Illusions",
   ],
   typeSpeed: 100,
