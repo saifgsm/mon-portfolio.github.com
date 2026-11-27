@@ -862,3 +862,63 @@ color-5.css
 }
 
 */
+
+/* Compétences : étiquettes */
+.about .about-content .skills .skill-group {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.about .about-content .skills .skill-group h5 {
+  line-height: 36px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-black900);
+}
+.about .about-content .skills .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.about .about-content .skills .skill-tags li {
+  font-size: 14px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--skin-color);
+  color: var(--text-black900);
+  background: var(--bg-black100);
+}
+
+/* Projets : titre, description, technologies, lien */
+.portfolio .portfolio-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-black900);
+  margin-top: 12px;
+}
+.portfolio .portfolio-desc {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-black700);
+  margin-top: 6px;
+}
+.portfolio .portfolio-tech {
+  font-size: 13px;
+  color: var(--skin-color);
+  margin-top: 6px;
+  font-weight: 500;
+}
+.portfolio .portfolio-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-black900);
+  border-bottom: 1px solid var(--skin-color);
+}
+.portfolio .portfolio-link:hover {
+  color: var(--skin-color);
+}
+.portfolio .portfolio-item-inner .portfolio-img img {
+  aspect-ratio: 19 / 9;
+  object-fit: cover;
+}
