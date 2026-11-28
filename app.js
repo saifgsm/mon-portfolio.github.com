@@ -43,12 +43,7 @@ window.addEventListener("load", () => {
 
 var typed = new Typed(".typing", {
   strings: [
-    "",
-    "Développeur Web",
-    "Propriétaire de marque",
-
-    "Monteur vidéo",
-    "Étudiant en informatique",
+    "développeur full-stack",
   ],
   typeSpeed: 100,
   backSpeed: 60,
@@ -156,3 +151,16 @@ colorButtons.forEach((btn) => {
     document.documentElement.style.setProperty("--skin-color", newColor);
   });
 });
+
+/* Âge calculé automatiquement à partir de la date de naissance */
+const ageEl = document.getElementById("age");
+if (ageEl) {
+  const birth = new Date(ageEl.dataset.birthdate);
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  const beforeBirthday =
+    today.getMonth() < birth.getMonth() ||
+    (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate());
+  if (beforeBirthday) age--;
+  ageEl.textContent = age;
+}
