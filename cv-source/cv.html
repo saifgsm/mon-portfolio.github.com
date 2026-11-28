@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV – Sifeddine Gouasmia</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --red: #ec1839; --ink: #1d1d22; --muted: #5b5b66; --side: #1f1f24; --sideInk: #e9e9ee; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; height: 297mm; }
+  body { font-family: "Poppins", Arial, sans-serif; color: var(--ink); font-size: 8.6pt; line-height: 1.42; display: grid; grid-template-columns: 66mm 1fr; }
+  aside { background: var(--side); color: var(--sideInk); padding: 11mm 7mm 9mm 8mm; display: flex; flex-direction: column; gap: 5.2mm; }
+  main { padding: 9mm 10mm 7mm 9mm; display: flex; flex-direction: column; gap: 3.2mm; }
+  .photo { width: 30mm; height: 35mm; object-fit: cover; border-radius: 3mm; border: 0.7mm solid var(--red); align-self: center; }
+  aside h3 { font-size: 9pt; font-weight: 600; color: #fff; letter-spacing: .02em; padding-bottom: 1.2mm; margin-bottom: 2mm; border-bottom: 0.4mm solid var(--red); }
+  .contact li { list-style: none; margin-bottom: 1.8mm; font-size: 8pt; overflow-wrap: anywhere; }
+  .contact a { color: inherit; text-decoration: none; }
+  .contact b { display: block; color: var(--red); font-weight: 600; font-size: 7pt; line-height: 1.2; }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.3mm; }
+  .tags span { font-size: 7.4pt; padding: .5mm 2mm; border-radius: 3mm; border: 0.3mm solid rgba(236,24,57,.8); color: #fff; }
+  .sk + .sk { margin-top: 2.2mm; }
+  .sk p { font-size: 7.6pt; color: #b9b9c4; margin-bottom: 1mm; font-weight: 500; }
+  .lang li { list-style: none; display: flex; justify-content: space-between; font-size: 8pt; margin-bottom: 1mm; }
+  .lang span { color: #b9b9c4; }
+  header h1 { font-size: 22pt; line-height: 1.05; font-weight: 700; letter-spacing: -.01em; }
+  header h1 span { color: var(--red); }
+  header .role { font-size: 11pt; font-weight: 600; margin-top: 1mm; }
+  header .goal { display: inline-block; margin-top: 2mm; background: var(--red); color: #fff; font-weight: 600; font-size: 8.4pt; padding: 1mm 3mm; border-radius: 1.5mm; }
+  section h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); display: flex; align-items: center; gap: 2.5mm; margin-bottom: 1.6mm; }
+  section h2::after { content: ""; flex: 1; height: 0.35mm; background: var(--red); }
+  .profile { color: #33333b; text-align: justify; }
+  .item + .item { margin-top: 2.1mm; }
+  .item .top { display: flex; justify-content: space-between; gap: 3mm; align-items: baseline; }
+  .item h4 { font-size: 9pt; font-weight: 600; }
+  .item .date { font-size: 7.8pt; color: var(--red); font-weight: 600; white-space: nowrap; }
+  .item .sub { font-size: 8pt; color: var(--muted); font-style: italic; }
+  .item ul { margin: 0.8mm 0 0 4mm; }
+  .item li { margin-bottom: .4mm; }
+  .item .tech { font-size: 7.6pt; color: var(--red); font-weight: 500; margin-top: .6mm; }
+</style>
+</head>
+<body>
+  <aside>
+    <img class="photo" src="photo.jpg" alt="Photo de Sifeddine Gouasmia">
+
+    <div>
+      <h3>Contact</h3>
+      <ul class="contact">
+        <li><b>Tél.</b><a href="tel:+33759029668">+33 7 59 02 96 68</a></li>
+        <li><b>Email</b><a href="mailto:sifourma102005@icloud.com">sifourma102005@icloud.com</a></li>
+        <li><b>Ville</b>Paris, France</li>
+        <li><b>LinkedIn</b><a href="https://www.linkedin.com/in/sifeddine-gouasmia-191529373">linkedin.com/in/<wbr>sifeddine-gouasmia-191529373</a></li>
+        <li><b>GitHub</b><a href="https://github.com/saifgsm">github.com/saifgsm</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Compétences</h3>
+      <div class="sk"><p>Front-end</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Bootstrap</span></div></div>
+      <div class="sk"><p>Back-end</p><div class="tags"><span>Node.js</span><span>Express</span><span>Python</span><span>Django</span><span>FastAPI</span><span>Java (POO)</span></div></div>
+      <div class="sk"><p>Bases de données</p><div class="tags"><span>SQL</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>Oracle</span></div></div>
+      <div class="sk"><p>Data &amp; IA</p><div class="tags"><span>pandas</span><span>scikit-learn</span><span>Nettoyage de données</span><span>Streamlit</span></div></div>
+      <div class="sk"><p>Outils</p><div class="tags"><span>Git</span><span>GitHub</span><span>Docker</span><span>GitHub Actions</span><span>Prisma</span><span>Tests</span></div></div>
+    </div>
+
+    <div>
+      <h3>Langues</h3>
+      <ul class="lang">
+        <li>Arabe <span>Langue maternelle</span></li>
+        <li>Français <span>B2 (TCF 429)</span></li>
+        <li>Anglais <span>Niveau technique</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Centres d’intérêt</h3>
+      <div class="tags"><span>MMA</span><span>Course à pied</span><span>Voyages</span><span>Streetwear</span><span>Branding</span><span>Montage vidéo</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Sifeddine <span>Gouasmia</span></h1>
+      <div class="role">Développeur web full-stack · Étudiant à HETIC</div>
+      <div class="goal">Recherche une alternance à partir de septembre 2027</div>
+    </header>
+
+    <section>
+      <h2>Profil</h2>
+      <p class="profile">Étudiant en Bachelor Développement web à HETIC après une licence en informatique à l’USTHB, je conçois des applications web de A à Z : interface, API, base de données, tests et déploiement. À l’aise en front-end comme en back-end (Node.js, Django, FastAPI), j’ai aussi des bases en data et IA. J’ai livré en stage une application utilisée en entreprise et je travaille en équipe avec Git, Docker et l’intégration continue.</p>
+    </section>
+
+    <section>
+      <h2>Expérience</h2>
+      <div class="item">
+        <div class="top"><h4>Stagiaire développeur web – Air Algérie</h4><span class="date">Juil. – Sept. 2026</span></div>
+        <div class="sub">Direction des ressources humaines, Domestic Airlines · Alger</div>
+        <ul>
+          <li>Développement d’une application web de gestion du personnel : agents, contrats, postes, structures, absences.</li>
+          <li>Authentification et gestion des permissions, CRUD complet avec l’ORM Django.</li>
+          <li>Déploiement sur un poste de l’entreprise servant de serveur local, accessible sur le réseau interne.</li>
+        </ul>
+        <div class="tech">Python · Django · MySQL · HTML · CSS · JavaScript</div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Stagiaire en informatique – ERMA Aero</h4><span class="date">Déc. 2025 – Janv. 2026</span></div>
+        <div class="sub">Établissement de Rénovation de Matériels Aéronautiques · Dar El Beïda, Alger</div>
+        <ul><li>Gestion des services informatiques, tâches techniques quotidiennes et organisation des données.</li></ul>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Fondateur – Illusions, marque de streetwear</h4><span class="date">Depuis juil. 2025</span></div>
+        <ul><li>Identité visuelle, design des produits, contenus vidéo et communication sur les réseaux sociaux.</li></ul>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Membre – Micro Club USTHB</h4><span class="date">2024 – 2026</span></div>
+        <ul><li>Club informatique de l’université : ateliers, formations et événements tech.</li></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projets</h2>
+      <div class="item">
+        <div class="top"><h4>Support Ticket API – API REST sécurisée</h4><span class="date">2026</span></div>
+        <ul><li>Authentification JWT, rôles, validation, limitation de débit, réponses générées par IA ; tests, CI GitHub Actions et audit de sécurité avec tests d’intrusion.</li></ul>
+        <div class="tech">Node.js · Express · TypeScript · PostgreSQL · Prisma</div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Ressourcerie Quartier – application en équipe</h4><span class="date">2026</span></div>
+        <ul><li>Gestion des dons et des objets, navigation et page des ateliers ; branches, pull requests et revues de code.</li></ul>
+        <div class="tech">Django · React · TypeScript · Vite</div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Détection de spam – hackathon Data &amp; IA (HETIC)</h4><span class="date">Nov. 2026</span></div>
+        <ul><li>Classification de SMS (TF-IDF + Naive Bayes) ; j’ai développé l’API de prédiction et l’interface de démonstration.</li></ul>
+        <div class="tech">Python · pandas · scikit-learn · FastAPI · Streamlit · Docker</div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Gestion de rendez-vous médicaux – TP universitaire</h4><span class="date">2026</span></div>
+        <ul><li>Application en programmation orientée objet : patients, médecins, créneaux et réservations.</li></ul>
+        <div class="tech">Java · JDBC · MySQL</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formation</h2>
+      <div class="item">
+        <div class="top"><h4>Bachelor Développement web (B2) – HETIC, Paris</h4><span class="date">Depuis oct. 2026</span></div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Licence en informatique – USTHB, Alger</h4><span class="date">2024 – 2026</span></div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Full-Stack Web Development Bootcamp – Udemy (certificat)</h4><span class="date">2024 – 2025</span></div>
+      </div>
+      <div class="item">
+        <div class="top"><h4>Baccalauréat sciences expérimentales – mention Assez Bien</h4><span class="date">2023</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
