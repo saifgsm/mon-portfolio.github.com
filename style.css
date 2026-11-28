@@ -922,3 +922,29 @@ color-5.css
   aspect-ratio: 19 / 9;
   object-fit: cover;
 }
+
+/* Centres d’intérêt */
+.about .about-content .personal-info .interests {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-top: 10px;
+}
+.about .about-content .personal-info .interests h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-black900);
+  margin-bottom: 10px;
+}
+.about .about-content .personal-info .interests .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.about .about-content .personal-info .interests .skill-tags li {
+  font-size: 14px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--skin-color);
+  color: var(--text-black900);
+  background: var(--bg-black100);
+}
