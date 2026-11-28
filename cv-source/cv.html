@@ -4,158 +4,201 @@
 <meta charset="utf-8">
 <title>CV – Sifeddine Gouasmia</title>
 <style>
+  @font-face { font-family: "Montserrat"; src: url(fonts/montserrat-latin-400-normal.woff2); font-weight: 400; }
+  @font-face { font-family: "Montserrat"; src: url(fonts/montserrat-latin-500-normal.woff2); font-weight: 500; }
+  @font-face { font-family: "Montserrat"; src: url(fonts/montserrat-latin-600-normal.woff2); font-weight: 600; }
+  @font-face { font-family: "Montserrat"; src: url(fonts/montserrat-latin-700-normal.woff2); font-weight: 700; }
+  @font-face { font-family: "Questrial"; src: url(fonts/questrial-latin-400-normal.woff2); font-weight: 400; }
   @page { size: A4; margin: 0; }
-  :root { --red: #ec1839; --ink: #1d1d22; --muted: #5b5b66; --side: #1f1f24; --sideInk: #e9e9ee; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 210mm; height: 297mm; }
-  body { font-family: "Poppins", Arial, sans-serif; color: var(--ink); font-size: 8.6pt; line-height: 1.42; display: grid; grid-template-columns: 66mm 1fr; }
-  aside { background: var(--side); color: var(--sideInk); padding: 11mm 7mm 9mm 8mm; display: flex; flex-direction: column; gap: 5.2mm; }
-  main { padding: 9mm 10mm 7mm 9mm; display: flex; flex-direction: column; gap: 3.2mm; }
-  .photo { width: 30mm; height: 35mm; object-fit: cover; border-radius: 3mm; border: 0.7mm solid var(--red); align-self: center; }
-  aside h3 { font-size: 9pt; font-weight: 600; color: #fff; letter-spacing: .02em; padding-bottom: 1.2mm; margin-bottom: 2mm; border-bottom: 0.4mm solid var(--red); }
-  .contact li { list-style: none; margin-bottom: 1.8mm; font-size: 8pt; overflow-wrap: anywhere; }
-  .contact a { color: inherit; text-decoration: none; }
-  .contact b { display: block; color: var(--red); font-weight: 600; font-size: 7pt; line-height: 1.2; }
-  .tags { display: flex; flex-wrap: wrap; gap: 1.3mm; }
-  .tags span { font-size: 7.4pt; padding: .5mm 2mm; border-radius: 3mm; border: 0.3mm solid rgba(236,24,57,.8); color: #fff; }
-  .sk + .sk { margin-top: 2.2mm; }
-  .sk p { font-size: 7.6pt; color: #b9b9c4; margin-bottom: 1mm; font-weight: 500; }
-  .lang li { list-style: none; display: flex; justify-content: space-between; font-size: 8pt; margin-bottom: 1mm; }
-  .lang span { color: #b9b9c4; }
-  header h1 { font-size: 22pt; line-height: 1.05; font-weight: 700; letter-spacing: -.01em; }
-  header h1 span { color: var(--red); }
-  header .role { font-size: 11pt; font-weight: 600; margin-top: 1mm; }
-  header .goal { display: inline-block; margin-top: 2mm; background: var(--red); color: #fff; font-weight: 600; font-size: 8.4pt; padding: 1mm 3mm; border-radius: 1.5mm; }
-  section h2 { font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--ink); display: flex; align-items: center; gap: 2.5mm; margin-bottom: 1.6mm; }
-  section h2::after { content: ""; flex: 1; height: 0.35mm; background: var(--red); }
-  .profile { color: #33333b; text-align: justify; }
-  .item + .item { margin-top: 2.1mm; }
-  .item .top { display: flex; justify-content: space-between; gap: 3mm; align-items: baseline; }
-  .item h4 { font-size: 9pt; font-weight: 600; }
-  .item .date { font-size: 7.8pt; color: var(--red); font-weight: 600; white-space: nowrap; }
-  .item .sub { font-size: 8pt; color: var(--muted); font-style: italic; }
-  .item ul { margin: 0.8mm 0 0 4mm; }
-  .item li { margin-bottom: .4mm; }
-  .item .tech { font-size: 7.6pt; color: var(--red); font-weight: 500; margin-top: .6mm; }
+  body { font-family: "Questrial", "Montserrat", Arial, sans-serif; color: #1a1a1a; font-size: 8.7pt; line-height: 1.45; padding: 9mm 11mm 8mm 11mm; }
+  a { color: inherit; text-decoration: none; }
+
+  header { display: grid; grid-template-columns: 34mm 1fr 76mm; gap: 6mm; align-items: center; }
+  .photo { width: 34mm; height: 40mm; object-fit: cover; }
+  .name h1 { font-family: "Montserrat"; font-weight: 700; font-size: 25pt; line-height: 1.08; letter-spacing: .06em; text-transform: uppercase; }
+  .name .role { font-family: "Montserrat"; font-weight: 500; font-size: 10pt; letter-spacing: .1em; text-transform: uppercase; margin-top: 3mm; white-space: nowrap; }
+  .contact { list-style: none; font-family: "Montserrat"; font-size: 8.3pt; }
+  .contact li { display: flex; align-items: center; gap: 3mm; margin-bottom: 2.6mm; }
+  .contact svg { width: 4.6mm; height: 4.6mm; flex: none; }
+
+  hr { border: 0; border-top: 0.35mm solid #1a1a1a; }
+  .full { margin-top: 5mm; }
+  h2 { font-family: "Montserrat"; font-weight: 600; font-size: 12pt; letter-spacing: .12em; text-transform: uppercase; margin: 1.6mm 0 1.6mm; }
+  .profil p { text-align: justify; font-size: 9pt; }
+  .goal { font-family: "Montserrat"; font-weight: 600; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1.18fr; gap: 9mm; margin-top: 3.2mm; }
+  .col > section + section { margin-top: 3.4mm; }
+  .col > section > hr { margin-bottom: 0; }
+  h3 { font-family: "Montserrat"; font-weight: 600; font-size: 8.7pt; text-transform: uppercase; line-height: 1.3; }
+  .entry + .entry { margin-top: 2.3mm; }
+  .meta { font-size: 8.4pt; color: #333; }
+  .entry ul { list-style: none; }
+  .entry li { padding-left: 3mm; position: relative; }
+  .entry li::before { content: "•"; position: absolute; left: 0; }
+  .tech { font-size: 7.9pt; color: #555; margin-top: .3mm; }
+  .sub { font-family: "Montserrat"; font-weight: 600; font-size: 8.4pt; text-transform: uppercase; margin: 1.6mm 0 .6mm; }
+  .skills li { list-style: none; padding-left: 3mm; position: relative; margin-bottom: .5mm; }
+  .skills li::before { content: "•"; position: absolute; left: 0; }
+  .skills b { font-family: "Montserrat"; font-weight: 600; font-size: 8.2pt; }
+  .langs li, .interests li { list-style: none; padding-left: 3mm; position: relative; margin-bottom: .4mm; }
+  .langs li::before, .interests li::before { content: "•"; position: absolute; left: 0; }
+  .langs b, .interests b { font-family: "Montserrat"; font-weight: 600; font-size: 8.2pt; text-transform: uppercase; }
 </style>
 </head>
 <body>
-  <aside>
+  <header>
     <img class="photo" src="photo.jpg" alt="Photo de Sifeddine Gouasmia">
-
-    <div>
-      <h3>Contact</h3>
-      <ul class="contact">
-        <li><b>Tél.</b><a href="tel:+33759029668">+33 7 59 02 96 68</a></li>
-        <li><b>Email</b><a href="mailto:sifourma102005@icloud.com">sifourma102005@icloud.com</a></li>
-        <li><b>Ville</b>Paris, France</li>
-        <li><b>LinkedIn</b><a href="https://www.linkedin.com/in/sifeddine-gouasmia-191529373">linkedin.com/in/<wbr>sifeddine-gouasmia-191529373</a></li>
-        <li><b>GitHub</b><a href="https://github.com/saifgsm">github.com/saifgsm</a></li>
-      </ul>
+    <div class="name">
+      <h1>Gouasmia<br>Sifeddine</h1>
+      <div class="role">Développeur web full-stack</div>
     </div>
+    <ul class="contact">
+      <li><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2z" fill="#1a1a1a"/><path d="M2.5 5.5 12 13l9.5-7.5" fill="none" stroke="#fff" stroke-width="1.6"/></svg><a href="mailto:sifourma102005@icloud.com">sifourma102005@icloud.com</a></li>
+      <li><svg viewBox="0 0 24 24"><path d="M6.6 2.5 9.8 6l-2 2.6a12.5 12.5 0 0 0 7.6 7.6l2.6-2 3.5 3.2-1.6 3.6C11 20.6 3.4 13 3 4.1z" fill="#1a1a1a"/></svg><a href="tel:+33759029668">+33 7 59 02 96 68</a></li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" fill="#1a1a1a"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>PARIS, FRANCE</li>
+      <li><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3" fill="#1a1a1a"/><path d="M7 10v7M7 7v.1M11 17v-7m0 3.2c0-2 1.3-3.2 2.9-3.2 1.7 0 2.6 1.1 2.6 3.2V17" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg><a href="https://www.linkedin.com/in/sifeddine-gouasmia-191529373">linkedin.com/in/sifeddine-gouasmia-191529373</a></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#1a1a1a"/><path d="M8.5 9.5 6 12l2.5 2.5M15.5 9.5 18 12l-2.5 2.5M13 8l-2 8" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><a href="https://github.com/saifgsm">github.com/saifgsm</a></li>
+    </ul>
+  </header>
 
-    <div>
-      <h3>Compétences</h3>
-      <div class="sk"><p>Front-end</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Bootstrap</span></div></div>
-      <div class="sk"><p>Back-end</p><div class="tags"><span>Node.js</span><span>Express</span><span>Python</span><span>Django</span><span>FastAPI</span><span>Java (POO)</span></div></div>
-      <div class="sk"><p>Bases de données</p><div class="tags"><span>SQL</span><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>Oracle</span></div></div>
-      <div class="sk"><p>Data &amp; IA</p><div class="tags"><span>pandas</span><span>scikit-learn</span><span>Nettoyage de données</span><span>Streamlit</span></div></div>
-      <div class="sk"><p>Outils</p><div class="tags"><span>Git</span><span>GitHub</span><span>Docker</span><span>GitHub Actions</span><span>Prisma</span><span>Tests</span></div></div>
-    </div>
+  <section class="full profil">
+    <hr>
+    <h2>Profil</h2>
+    <p>Étudiant en Bachelor Développement web à HETIC (Paris) après une licence en informatique à l’USTHB, je conçois des applications web de A à Z : interface, API, base de données, tests et déploiement. À l’aise en front-end (HTML, CSS, JavaScript, TypeScript, React) comme en back-end (Node.js, Express, Django, FastAPI), j’ai aussi des bases en data et IA. En stage, j’ai livré une application utilisée en entreprise, et je travaille en équipe avec Git, Docker et l’intégration continue. <span class="goal">Je recherche une alternance en développement web full-stack à partir de septembre 2027.</span></p>
+  </section>
 
-    <div>
-      <h3>Langues</h3>
-      <ul class="lang">
-        <li>Arabe <span>Langue maternelle</span></li>
-        <li>Français <span>B2 (TCF 429)</span></li>
-        <li>Anglais <span>Niveau technique</span></li>
-      </ul>
-    </div>
+  <div class="cols">
+    <div class="col">
+      <section>
+        <hr>
+        <h2>Formation</h2>
+        <div class="entry">
+          <h3>Bachelor Développement web — HETIC</h3>
+          <div class="meta">Oct. 2026 – présent · 2ᵉ année, Paris</div>
+          <div class="tech">Front-end, back-end, Node.js, Python, bases de données, gestion de projet</div>
+        </div>
+        <div class="entry">
+          <h3>Licence en informatique — USTHB, Alger</h3>
+          <div class="meta">2024 – mai 2026</div>
+          <div class="tech">Algorithmique, programmation C, POO en Java, SQL et Oracle, architecture des systèmes</div>
+        </div>
+        <div class="entry">
+          <h3>Développement web full-stack — Udemy</h3>
+          <div class="meta">2024 – 2025 · certificat obtenu</div>
+        </div>
+        <div class="entry">
+          <h3>Design et montage vidéo — Brainer X</h3>
+          <div class="meta">2024</div>
+        </div>
+        <div class="entry">
+          <h3>Baccalauréat — Sciences expérimentales</h3>
+          <div class="meta">Lycée Colonel Amirouche · Mention Assez Bien (14,94 / 20) · 2023</div>
+        </div>
+      </section>
 
-    <div>
-      <h3>Centres d’intérêt</h3>
-      <div class="tags"><span>MMA</span><span>Course à pied</span><span>Voyages</span><span>Streetwear</span><span>Branding</span><span>Montage vidéo</span></div>
-    </div>
-  </aside>
+      <section>
+        <hr>
+        <h2>Projets</h2>
+        <div class="entry">
+          <h3>Support Ticket API — API REST sécurisée</h3>
+          <ul><li>JWT, rôles, validation, réponses générées par IA, tests, CI et audit de sécurité.</li></ul>
+          <div class="tech">Node.js · Express · TypeScript · PostgreSQL · Prisma</div>
+        </div>
+        <div class="entry">
+          <h3>Ressourcerie Quartier — projet en équipe</h3>
+          <ul><li>Dons et objets, navigation, page des ateliers ; pull requests et revues de code.</li></ul>
+          <div class="tech">Django · React · TypeScript</div>
+        </div>
+        <div class="entry">
+          <h3>Détection de spam — hackathon Data &amp; IA HETIC</h3>
+          <ul><li>API de prédiction et interface de démonstration d’un modèle de classification.</li></ul>
+          <div class="tech">pandas · scikit-learn · FastAPI · Streamlit · Docker</div>
+        </div>
+        <div class="entry">
+          <h3>Rendez-vous médicaux — TP universitaire</h3>
+          <ul><li>Application en programmation orientée objet.</li></ul>
+          <div class="tech">Java · JDBC · MySQL</div>
+        </div>
+      </section>
 
-  <main>
-    <header>
-      <h1>Sifeddine <span>Gouasmia</span></h1>
-      <div class="role">Développeur web full-stack · Étudiant à HETIC</div>
-      <div class="goal">Recherche une alternance à partir de septembre 2027</div>
-    </header>
-
-    <section>
-      <h2>Profil</h2>
-      <p class="profile">Étudiant en Bachelor Développement web à HETIC après une licence en informatique à l’USTHB, je conçois des applications web de A à Z : interface, API, base de données, tests et déploiement. À l’aise en front-end comme en back-end (Node.js, Django, FastAPI), j’ai aussi des bases en data et IA. J’ai livré en stage une application utilisée en entreprise et je travaille en équipe avec Git, Docker et l’intégration continue.</p>
-    </section>
-
-    <section>
-      <h2>Expérience</h2>
-      <div class="item">
-        <div class="top"><h4>Stagiaire développeur web – Air Algérie</h4><span class="date">Juil. – Sept. 2026</span></div>
-        <div class="sub">Direction des ressources humaines, Domestic Airlines · Alger</div>
-        <ul>
-          <li>Développement d’une application web de gestion du personnel : agents, contrats, postes, structures, absences.</li>
-          <li>Authentification et gestion des permissions, CRUD complet avec l’ORM Django.</li>
-          <li>Déploiement sur un poste de l’entreprise servant de serveur local, accessible sur le réseau interne.</li>
+      <section>
+        <hr>
+        <h2>Langues</h2>
+        <ul class="langs">
+          <li><b>Français :</b> B2 (TCF, 429 points)</li>
+          <li><b>Anglais :</b> bon niveau technique</li>
+          <li><b>Arabe :</b> langue maternelle</li>
         </ul>
-        <div class="tech">Python · Django · MySQL · HTML · CSS · JavaScript</div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Stagiaire en informatique – ERMA Aero</h4><span class="date">Déc. 2025 – Janv. 2026</span></div>
-        <div class="sub">Établissement de Rénovation de Matériels Aéronautiques · Dar El Beïda, Alger</div>
-        <ul><li>Gestion des services informatiques, tâches techniques quotidiennes et organisation des données.</li></ul>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Fondateur – Illusions, marque de streetwear</h4><span class="date">Depuis juil. 2025</span></div>
-        <ul><li>Identité visuelle, design des produits, contenus vidéo et communication sur les réseaux sociaux.</li></ul>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Membre – Micro Club USTHB</h4><span class="date">2024 – 2026</span></div>
-        <ul><li>Club informatique de l’université : ateliers, formations et événements tech.</li></ul>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <section>
-      <h2>Projets</h2>
-      <div class="item">
-        <div class="top"><h4>Support Ticket API – API REST sécurisée</h4><span class="date">2026</span></div>
-        <ul><li>Authentification JWT, rôles, validation, limitation de débit, réponses générées par IA ; tests, CI GitHub Actions et audit de sécurité avec tests d’intrusion.</li></ul>
-        <div class="tech">Node.js · Express · TypeScript · PostgreSQL · Prisma</div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Ressourcerie Quartier – application en équipe</h4><span class="date">2026</span></div>
-        <ul><li>Gestion des dons et des objets, navigation et page des ateliers ; branches, pull requests et revues de code.</li></ul>
-        <div class="tech">Django · React · TypeScript · Vite</div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Détection de spam – hackathon Data &amp; IA (HETIC)</h4><span class="date">Nov. 2026</span></div>
-        <ul><li>Classification de SMS (TF-IDF + Naive Bayes) ; j’ai développé l’API de prédiction et l’interface de démonstration.</li></ul>
-        <div class="tech">Python · pandas · scikit-learn · FastAPI · Streamlit · Docker</div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Gestion de rendez-vous médicaux – TP universitaire</h4><span class="date">2026</span></div>
-        <ul><li>Application en programmation orientée objet : patients, médecins, créneaux et réservations.</li></ul>
-        <div class="tech">Java · JDBC · MySQL</div>
-      </div>
-    </section>
+    <div class="col">
+      <section>
+        <hr>
+        <h2>Expérience</h2>
+        <div class="entry">
+          <h3>Stagiaire développeur web — Air Algérie</h3>
+          <div class="meta">Juil. – sept. 2026 · Direction des RH, Domestic Airlines, Alger</div>
+          <ul>
+            <li>Application web de gestion du personnel : agents, contrats, postes, structures, absences.</li>
+            <li>Authentification, permissions et CRUD complet avec l’ORM Django.</li>
+            <li>Déploiement sur le réseau interne de l’entreprise.</li>
+          </ul>
+          <div class="tech">Python · Django · MySQL · HTML · CSS · JavaScript</div>
+        </div>
+        <div class="entry">
+          <h3>Stagiaire en informatique — ERMA Aero</h3>
+          <div class="meta">Déc. 2025 – janv. 2026 · Dar El Beïda, Alger</div>
+          <ul><li>Gestion des services informatiques et organisation des données.</li></ul>
+        </div>
+        <div class="entry">
+          <h3>Fondateur — marque de vêtements Illusions</h3>
+          <div class="meta">Juil. 2025 – présent</div>
+          <ul><li>Identité de marque, visuels, vidéos et communication digitale.</li></ul>
+        </div>
+        <div class="entry">
+          <h3>Membre — Micro Club USTHB</h3>
+          <div class="meta">2024 – 2026</div>
+          <ul><li>Club informatique : ateliers, formations et événements tech.</li></ul>
+        </div>
+      </section>
 
-    <section>
-      <h2>Formation</h2>
-      <div class="item">
-        <div class="top"><h4>Bachelor Développement web (B2) – HETIC, Paris</h4><span class="date">Depuis oct. 2026</span></div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Licence en informatique – USTHB, Alger</h4><span class="date">2024 – 2026</span></div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Full-Stack Web Development Bootcamp – Udemy (certificat)</h4><span class="date">2024 – 2025</span></div>
-      </div>
-      <div class="item">
-        <div class="top"><h4>Baccalauréat sciences expérimentales – mention Assez Bien</h4><span class="date">2023</span></div>
-      </div>
-    </section>
-  </main>
+      <section>
+        <hr>
+        <h2>Compétences</h2>
+        <div class="sub">Développement web</div>
+        <ul class="skills">
+          <li><b>Front-end :</b> HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Bootstrap, responsive design</li>
+          <li><b>Back-end :</b> Node.js, Express, Python, Django, FastAPI, Java (POO), API REST, JWT</li>
+          <li><b>Bases de données :</b> SQL, PostgreSQL, MySQL, SQLite, Oracle, Prisma (ORM)</li>
+        </ul>
+        <div class="sub">Data &amp; IA</div>
+        <ul class="skills">
+          <li>Nettoyage et préparation de données (pandas), entraînement de modèles (scikit-learn), Streamlit</li>
+        </ul>
+        <div class="sub">Outils &amp; méthodes</div>
+        <ul class="skills">
+          <li>Git, GitHub, Docker, Docker Compose, GitHub Actions, tests, travail en équipe (pull requests, revues de code)</li>
+        </ul>
+        <div class="sub">Design &amp; création</div>
+        <ul class="skills">
+          <li>Photoshop, Illustrator, Premiere Pro, Canva · branding, visuels, montage vidéo</li>
+        </ul>
+      </section>
+
+      <section>
+        <hr>
+        <h2>Centres d’intérêt</h2>
+        <ul class="interests">
+          <li><b>Sport :</b> MMA, course à pied</li>
+          <li><b>Création :</b> streetwear, branding, montage vidéo</li>
+          <li><b>Voyages</b></li>
+        </ul>
+      </section>
+    </div>
+  </div>
 </body>
 </html>
